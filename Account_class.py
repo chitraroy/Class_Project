@@ -23,18 +23,21 @@ display_details(): Prints the account details.
 class Account: 
 
     
-    def __init__(self, account_number, account_holder):
-            self.account_number = account_number       
-            self.account_holder = account_holder
-            self.balance = 500.00
+    # def __init__(self, account_number, account_holder):
+    def __init__(self, account_no, name, ph_no, balance ):
+         
+            self.account_number = account_no       
+            self.name = name
+            self.ph_no = ph_no
+            self.balance = balance
             
     def display_details(self):
-        return self.account_number, self.account_holder, self.balance
+        return self.account_number, self.name, self.balance,self.ph_no
     
     
     def deposite(self, amount):
-        # amount = int(input(f"the amnount deposited:"))
         self.balance = self. balance + amount
+        
         return self.balance
 
 
